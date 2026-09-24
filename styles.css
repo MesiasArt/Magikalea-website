@@ -132,8 +132,18 @@ p{color:#c6c9d8;line-height:1.7;font-size:16px}
 .flip-back{padding:8px;background:#17182a;transform:rotateY(180deg);justify-content:flex-end}
 .flip-card .artist-avatar{width:78px;height:78px;font-size:20px;border-width:3px}
 .flip-card .artist-avatar.is-empty svg{width:32px;height:32px}
+.flip-person{display:flex;flex-direction:column;align-items:center;width:100%}
 .flip-card h3{font-family:Cinzel,serif;font-size:15px;color:#202541;margin:12px 0 0;line-height:1.25;overflow-wrap:break-word}
 .flip-card .artist-socials{margin-top:10px}
+.flip-front.is-duo{padding:10px 8px 10px;justify-content:flex-start}
+.flip-front.is-duo .flip-person + .flip-person{margin-top:14px}
+.flip-front.is-duo .artist-avatar{width:46px;height:46px;font-size:13px;border-width:2px}
+.flip-front.is-duo .artist-avatar.is-empty svg{width:20px;height:20px}
+.flip-front.is-duo h3{font-size:12px;margin:4px 0 0}
+.flip-front.is-duo .artist-socials{margin-top:4px;gap:6px}
+.flip-front.is-duo .artist-socials a,.flip-front.is-duo .artist-socials span{width:24px;height:24px}
+.flip-front.is-duo .artist-socials svg{width:12px;height:12px}
+.flip-front.is-duo .flip-toggle{padding:6px 10px}
 .flip-card-art{width:100%;flex:1;min-height:0;object-fit:contain;background:#0d1020;-webkit-user-drag:none;user-select:none}
 .catalog-page{background:#f2eee5}
 .catalog-page .nav{position:sticky;top:0;height:74px;background:#111a3b;z-index:20}
@@ -185,6 +195,6 @@ footer{background:#070b1b;border-top:1px solid #293252;padding:40px 6vw;display:
   .hero{min-height:800px}.hero-logo{width:94vw}.hero-content{margin-top:-130px}.eyebrow{font-size:8px}.hero-card{width:230px}.social-row{font-size:8px;gap:9px}
   h2{font-size:42px}.lead{font-size:18px}.tcg-card{width:160px}
   .artist-leads{grid-template-columns:1fr}
-  .flip-card{width:156px;height:248px}
+  .flip-card{width:156px;height:276px}
   .artist-card h3{font-size:20px}
 }

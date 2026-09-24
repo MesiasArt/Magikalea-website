@@ -188,7 +188,7 @@ var ARTISTAS = [
   },
   {
     nombre: "Salted_Over",
-    foto: "",
+    foto: "assets/artistas/salted_over.jpg",
     carta: "assets/baja/Recovery copia.jpg",
     instagram: "https://www.instagram.com/salted_over/",
     x: "https://x.com/salted_over/"

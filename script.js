@@ -143,6 +143,7 @@ const I18N = {
     "community.body": "Únete al Discord para conocer avances, probar builds, ver arte nuevo y hablar directamente con el equipo.",
     "community.discord": "UNIRME AL DISCORD ↗",
     "community.x": "SEGUIR EN X / TWITTER ↗",
+    "community.ig": "SEGUIR EN INSTAGRAM ↗",
     "footer.name": "NOMBRE TEMPORAL",
     "catalog.back": "← Volver al inicio",
     "catalog.kicker": "COLECCIÓN",
@@ -214,6 +215,7 @@ const I18N = {
     "community.body": "Join the Discord for updates, playtest builds, new art, and to talk with the team.",
     "community.discord": "JOIN THE DISCORD ↗",
     "community.x": "FOLLOW ON X / TWITTER ↗",
+    "community.ig": "FOLLOW ON INSTAGRAM ↗",
     "footer.name": "TEMPORARY NAME",
     "catalog.back": "← Back to home",
     "catalog.kicker": "COLLECTION",
@@ -382,17 +384,26 @@ function cardArtistsMarkup(src) {
   return `<div class="card-artists">${people.map(cardArtistMarkup).join("")}</div>`;
 }
 
+function flipPersonMarkup(person) {
+  return `
+    <div class="flip-person">
+      ${avatarMarkup(person)}
+      <h3>${esc(person.name)}</h3>
+      ${socialMarkup(person)}
+    </div>
+  `;
+}
+
 function flipCardMarkup(person, clone) {
+  const people = [person, ...(person.extras || [])];
   const art = person.card
     ? `<img class="flip-card-art" src="${esc(person.card)}" alt="${clone ? "" : `Carta de ${esc(person.name)}`}">`
     : `<div class="flip-empty">${esc(t("flip.soon"))}</div>`;
   return `
     <article class="flip-card"${clone ? ' aria-hidden="true"' : ""}>
       <div class="flip-inner">
-        <div class="flip-face flip-front">
-          ${avatarMarkup(person)}
-          <h3>${esc(person.name)}</h3>
-          ${socialMarkup(person)}
+        <div class="flip-face flip-front${people.length > 1 ? " is-duo" : ""}">
+          ${people.map(flipPersonMarkup).join("")}
           <button type="button" class="flip-toggle" aria-pressed="false"${clone ? " tabindex=\"-1\"" : ""}>${esc(t("flip.see"))}</button>
         </div>
         <div class="flip-face flip-back">
@@ -641,7 +652,8 @@ function refreshLocalized() {
   });
   document.querySelectorAll(".flip-card .artist-socials a").forEach(link => {
     const label = link.getAttribute("title") || "";
-    const name = (link.closest(".flip-card").querySelector("h3") || {}).textContent || "";
+    const scope = link.closest(".flip-person") || link.closest(".flip-card");
+    const name = (scope.querySelector("h3") || {}).textContent || "";
     if (!label || !name) return;
     link.setAttribute("aria-label", LANG === "en" ? `${label} — ${name}` : `${label} de ${name}`);
   });

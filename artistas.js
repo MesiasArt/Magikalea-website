@@ -118,7 +118,7 @@ var ARTISTAS = [
   },
   {
     nombre: "Kosena Master",
-    foto: "",
+    foto: "assets/artistas/kosena_master.jpg",
     carta: "assets/baja/Deadeye.jpg",
     instagram: "https://www.instagram.com/kosena_master/",
     x: "https://x.com/kosena_master"

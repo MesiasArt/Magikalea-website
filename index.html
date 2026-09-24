@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>MAGIKALEA — Nombre Temporal</title>
-  <meta name="description" content="Magikalea — un juego de cartas de magia, estrategia y azar. Prueba el demo y únete a la comunidad.">
+  <title data-i18n="meta.homeTitle">MAGIKALEA — Nombre Temporal</title>
+  <meta name="description" data-i18n-content="meta.homeDesc" content="Magikalea — un juego de cartas de magia, estrategia y azar. Prueba el demo y únete a la comunidad.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,12 +15,12 @@
       <img src="assets/logo.png" alt="Magikalea">
     </a>
     <nav class="nav-links">
-      <a href="#game">EL JUEGO</a>
-      <a href="#cards">CARTAS</a>
-      <a href="#artists">ARTISTAS</a>
-      <a href="#community">COMUNIDAD</a>
+      <a href="#game" data-i18n="nav.game">EL JUEGO</a>
+      <a href="#cards" data-i18n="nav.cards">CARTAS</a>
+      <a href="#artists" data-i18n="nav.artists">ARTISTAS</a>
+      <a href="#community" data-i18n="nav.community">COMUNIDAD</a>
     </nav>
-    <a class="nav-cta" href="Magikalea.rar" download="Magikalea.rar">JUGAR DEMO <span>↗</span></a>
+    <a class="nav-cta" href="Magikalea.rar" download="Magikalea.rar"><span data-i18n="nav.demo">JUGAR DEMO</span> <span>↗</span></a>
   </header>
 
   <main id="top">
@@ -29,18 +29,18 @@
       <div class="hero-vignette"></div>
 
       <div class="hero-content">
-        <div class="eyebrow"><span class="spark">✦</span> JUEGO DE CARTAS DIGITAL <span class="spark">✦</span></div>
+        <div class="eyebrow"><span class="spark">✦</span> <span data-i18n="hero.eyebrow">JUEGO DE CARTAS DIGITAL</span> <span class="spark">✦</span></div>
         <img class="hero-logo" src="assets/logo.png" alt="MAGIKALEA — Nombre Temporal">
         <p class="hero-copy">
-          Encuentra al mago rival. Juega tus cartas. Lee sus movimientos.
-          <strong>La magia decide quién sobrevive.</strong>
+          <span data-i18n="hero.copy">Encuentra al mago rival. Juega tus cartas. Lee sus movimientos.</span>
+          <strong data-i18n="hero.strong">La magia decide quién sobrevive.</strong>
         </p>
         <div class="hero-actions">
           <a class="btn btn-gold" href="Magikalea.rar" download="Magikalea.rar">
-            <span class="btn-icon">▶</span> PROBAR EL DEMO
+            <span class="btn-icon">▶</span> <span data-i18n="hero.demo">PROBAR EL DEMO</span>
           </a>
           <a class="btn btn-dark" href="TU_LINK_DISCORD" target="_blank" rel="noreferrer">
-            <span class="btn-icon">☵</span> UNIRME AL DISCORD
+            <span class="btn-icon">☵</span> <span data-i18n="hero.discord">UNIRME AL DISCORD</span>
           </a>
         </div>
         <div class="social-row">
@@ -55,34 +55,34 @@
       <div class="hero-card">
         <div class="frame-corner tl"></div><div class="frame-corner tr"></div>
         <div class="frame-corner bl"></div><div class="frame-corner br"></div>
-        <img src="assets/gameplay.png" alt="Partida de Magikalea">
-        <div class="hero-card-caption"><span>DEMO EN DESARROLLO</span><span>✦</span><span>PC</span></div>
+        <img src="assets/gameplay.png" alt="Partida de Magikalea" data-i18n-alt="hero.alt">
+        <div class="hero-card-caption"><span data-i18n="hero.caption">DEMO EN DESARROLLO</span><span>✦</span><span>PC</span></div>
       </div>
 
-      <div class="scroll-hint">DESPLAZA <span>↓</span></div>
+      <div class="scroll-hint"><span data-i18n="hero.scroll">DESPLAZA</span> <span>↓</span></div>
     </section>
 
     <section class="intro section" id="game">
-      <div class="section-kicker">01 — EL JUEGO</div>
+      <div class="section-kicker" data-i18n="game.kicker">01 — EL JUEGO</div>
       <div class="intro-grid">
         <div>
-          <h2>Una batalla de magia<br><em>en tus manos.</em></h2>
-          <p class="lead">MAGIKALEA es un juego de cartas donde el azar, la estrategia y la lectura del rival se mezclan en partidas rápidas.</p>
-          <p>Tu objetivo es descubrir el Mago escondido en la mano de tu oponente y golpearlo tres veces. Cada carta puede cambiar el rumbo de la partida: elementos para atacar, trampas para castigar y bendiciones para alterar las reglas.</p>
-          <a class="text-link" href="#cards">DESCUBRE LAS CARTAS <span>→</span></a>
+          <h2 data-i18n-html="game.title">Una batalla de magia<br><em>en tus manos.</em></h2>
+          <p class="lead" data-i18n="game.lead">MAGIKALEA es un juego de cartas donde el azar, la estrategia y la lectura del rival se mezclan en partidas rápidas.</p>
+          <p data-i18n="game.body">Tu objetivo es descubrir el Mago escondido en la mano de tu oponente y golpearlo tres veces. Cada carta puede cambiar el rumbo de la partida: elementos para atacar, trampas para castigar y bendiciones para alterar las reglas.</p>
+          <a class="text-link" href="#cards"><span data-i18n="game.link">DESCUBRE LAS CARTAS</span> <span>→</span></a>
         </div>
         <div class="rule-card">
           <div class="rule-number">01</div>
-          <h3>ENCUENTRA</h3>
-          <p>Identifica dónde se esconde el Mago rival.</p>
+          <h3 data-i18n="rule.find">ENCUENTRA</h3>
+          <p data-i18n="rule.findBody">Identifica dónde se esconde el Mago rival.</p>
           <div class="rule-line"></div>
           <div class="rule-number">02</div>
-          <h3>ATACA</h3>
-          <p>Usa el elemento correcto para golpear su mano.</p>
+          <h3 data-i18n="rule.attack">ATACA</h3>
+          <p data-i18n="rule.attackBody">Usa el elemento correcto para golpear su mano.</p>
           <div class="rule-line"></div>
           <div class="rule-number">03</div>
-          <h3>VENCE</h3>
-          <p>Tres impactos al Mago y la partida termina.</p>
+          <h3 data-i18n="rule.win">VENCE</h3>
+          <p data-i18n="rule.winBody">Tres impactos al Mago y la partida termina.</p>
         </div>
       </div>
     </section>
@@ -90,40 +90,53 @@
     <section class="cards-section section" id="cards">
       <div class="section-head">
         <div>
-          <div class="section-kicker">02 — COLECCIÓN</div>
-          <h2>Las cartas<br><em>de Magikalea.</em></h2>
+          <div class="section-kicker" data-i18n="cards.kicker">02 — COLECCIÓN</div>
+          <h2 data-i18n-html="cards.title">Las cartas<br><em>de Magikalea.</em></h2>
         </div>
-        <p>Estas son algunas de las cartas que ya forman parte del prototipo. La colección seguirá creciendo durante el desarrollo.</p>
+        <p data-i18n="cards.lead">Estas son algunas de las cartas que ya forman parte del prototipo. La colección seguirá creciendo durante el desarrollo.</p>
       </div>
 
       <div class="card-gallery" id="card-gallery"></div>
-      <a class="more-link" href="catalogo.html#cartas">Ver más cartas</a>
+      <a class="more-link" href="catalogo.html#cartas" data-i18n="cards.more">Ver más cartas</a>
     </section>
 
     <section class="world-section">
       <div class="world-bg"></div>
-      <div class="world-content">
-        <div class="section-kicker">EL MUNDO</div>
-        <h2>Bienvenido a<br><em>Magikalea.</em></h2>
-        <p>Islas flotantes, torres mágicas, cristales y criaturas que esperan convertirse en parte de este universo.</p>
+      <div class="world-layout">
+        <div class="world-content">
+          <div class="section-kicker" data-i18n="world.kicker">EL MUNDO</div>
+          <h2 data-i18n-html="world.title">Bienvenido a<br><em>Magikalea.</em></h2>
+          <p data-i18n="world.body">Islas flotantes, torres mágicas, cristales y criaturas que esperan convertirse en parte de este universo.</p>
+        </div>
+        <div class="world-video">
+          <iframe
+            src="https://www.youtube.com/embed/yLclgxZIZew?si=enA2JsqjXQK_R7ub"
+            title="Video de Magikalea"
+            data-i18n-title="world.video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+            loading="lazy"></iframe>
+        </div>
       </div>
     </section>
 
     <section class="artists section" id="artists">
-      <div class="section-kicker">03 — CRÉDITOS</div>
+      <div class="section-kicker" data-i18n="artists.kicker">03 — CRÉDITOS</div>
       <div class="section-head">
-        <h2>Hecho por<br><em>artistas.</em></h2>
-        <p>Magikalea es un proyecto independiente construido junto a ilustradores, diseñadores y desarrolladores.</p>
+        <h2 data-i18n-html="artists.title">Hecho por<br><em>artistas.</em></h2>
+        <p data-i18n="artists.lead">Magikalea es un proyecto independiente construido junto a ilustradores, diseñadores y desarrolladores.</p>
       </div>
       <div class="artist-leads" id="artist-leads"></div>
       <div class="roster-block">
-        <div class="roster-kicker">Colaboradores</div>
+        <div class="roster-kicker" data-i18n="artists.roster">Colaboradores</div>
         <div class="carousel-shell" id="artist-carousel">
-          <button type="button" class="carousel-nav prev" aria-label="Artistas anteriores">‹</button>
+          <button type="button" class="carousel-nav prev" aria-label="Artistas anteriores" data-i18n-aria="artists.prev">‹</button>
           <div class="carousel-viewport">
             <div class="carousel-track" id="artist-roster"></div>
           </div>
-          <button type="button" class="carousel-nav next" aria-label="Artistas siguientes">›</button>
+          <button type="button" class="carousel-nav next" aria-label="Artistas siguientes" data-i18n-aria="artists.next">›</button>
         </div>
       </div>
     </section>
@@ -131,12 +144,12 @@
     <section class="community" id="community">
       <div class="community-bg"></div>
       <div class="community-inner">
-        <div class="community-badge">✦ LA MAGIA NOS UNE ✦</div>
-        <h2>¿Quieres ver cómo<br><em>se hace el juego?</em></h2>
-        <p>Únete al Discord para conocer avances, probar builds, ver arte nuevo y hablar directamente con el equipo.</p>
+        <div class="community-badge" data-i18n="community.badge">✦ LA MAGIA NOS UNE ✦</div>
+        <h2 data-i18n-html="community.title">¿Quieres ver cómo<br><em>se hace el juego?</em></h2>
+        <p data-i18n="community.body">Únete al Discord para conocer avances, probar builds, ver arte nuevo y hablar directamente con el equipo.</p>
         <div class="community-actions">
-          <a class="btn btn-gold big" href="TU_LINK_DISCORD" target="_blank" rel="noreferrer">UNIRME AL DISCORD ↗</a>
-          <a class="btn btn-outline big" href="TU_LINK_TWITTER" target="_blank" rel="noreferrer">SEGUIR EN X / TWITTER ↗</a>
+          <a class="btn btn-gold big" href="TU_LINK_DISCORD" target="_blank" rel="noreferrer" data-i18n="community.discord">UNIRME AL DISCORD ↗</a>
+          <a class="btn btn-outline big" href="TU_LINK_TWITTER" target="_blank" rel="noreferrer" data-i18n="community.x">SEGUIR EN X / TWITTER ↗</a>
         </div>
       </div>
     </section>
@@ -145,7 +158,7 @@
   <footer>
     <div class="footer-brand">
       <img src="assets/logo.png" alt="Magikalea">
-      <span>NOMBRE TEMPORAL</span>
+      <span data-i18n="footer.name">NOMBRE TEMPORAL</span>
     </div>
     <div class="footer-links">
       <a href="TU_LINK_STEAM">STEAM</a>

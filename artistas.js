@@ -17,7 +17,13 @@
 //  7. Para que salga en una pestaña del catálogo, en CARTAS
 //     escribe el tipo: "elementales", "magos", "bendiciones",
 //     "maldiciones" o "joker".
-//  8. Guarda el archivo y recarga la pagina.
+//  8. Si otra persona trabajo la misma carta (por ejemplo el color),
+//     agrega "tambien" dentro de ese artista, con su nombre y rol.
+//     Ejemplo:
+//     tambien: [
+//       { nombre: "Ana", rol: "Color", foto: "", instagram: "https://www.instagram.com/ana" }
+//     ]
+//  9. Guarda el archivo y recarga la pagina.
 //
 //  No borres las comillas " " ni las comas ,
 // ============================================================
@@ -29,7 +35,7 @@ var EQUIPO = [
     iniciales: "FB",
     foto: "assets/artistas/mesiasart.jpg",
     carta: "",
-    instagram: "",
+    instagram: "https://www.instagram.com/mesiasart",
     x: "https://x.com/mesiasart",
     credito: "Creador / Game Design",
     roles: [
@@ -42,10 +48,10 @@ var EQUIPO = [
     nombre: "Ronny Correa",
     alias: "",
     iniciales: "RC",
-    foto: "",
+    foto: "assets/artistas/ronny_correa.jpg",
     carta: "",
     instagram: "https://www.instagram.com/ronny.correa.5/",
-    x: "",
+    x: "https://x.com/ronny.correa.5",
     credito: "Desarrollo",
     roles: [
       "Lead Programmer",
@@ -58,7 +64,7 @@ var EQUIPO = [
     iniciales: "YC",
     foto: "assets/artistas/yonsoncb.jpg",
     carta: "",
-    instagram: "",
+    instagram: "https://www.instagram.com/Yonsoncb",
     x: "https://x.com/Yonsoncb",
     credito: "Artista principal",
     roles: [
@@ -70,10 +76,10 @@ var EQUIPO = [
     nombre: "Gabriel Toribio",
     alias: "",
     iniciales: "GC",
-    foto: "",
+    foto: "assets/artistas/gabriel_toribio.jpg",
     carta: "",
     instagram: "https://www.instagram.com/gabriel.nadamas/",
-    x: "",
+    x: "https://x.com/gabriel.nadamas",
     credito: "Graphic Design",
     roles: [
       "Graphic Designer · Card Production · Logo"
@@ -83,74 +89,183 @@ var EQUIPO = [
 
 var ARTISTAS = [
   {
+    nombre: "MesiasArt",
+    foto: "assets/artistas/mesiasart.jpg",
+    carta: "assets/baja/Arcane Call.jpg",
+    instagram: "https://www.instagram.com/mesiasartrd/",
+    x: "https://x.com/mesiasart"
+  },
+  {
     nombre: "DarkerEve",
-    foto: "",
+    foto: "assets/artistas/darkereve.jpg",
     carta: "assets/baja/Maga - Mao.jpg",
     instagram: "https://www.instagram.com/darkereve/",
-    x: ""
+    x: "https://x.com/darkereve"
   },
   {
     nombre: "YonsonCB",
-    foto: "",
+    foto: "assets/artistas/yonsoncb.jpg",
     carta: "assets/baja/Fortune's Favor.jpg",
     instagram: "https://www.instagram.com/cloudettesama/",
-    x: ""
+    x: "https://x.com/cloudettesama"
+  },
+  {
+    nombre: "桜上水ナミ(Nami)",
+    foto: "assets/artistas/桜上水ナミ(Nami).jpg",
+    carta: "assets/baja/Maga - Naira.jpg",
+    instagram: "https://www.instagram.com/N_sakurajyousui",
+    x: "https://x.com/N_sakurajyousui"
   },
   {
     nombre: "Kosena Master",
     foto: "",
     carta: "assets/baja/Deadeye.jpg",
     instagram: "https://www.instagram.com/kosena_master/",
-    x: ""
+    x: "https://x.com/kosena_master"
   },
   {
     nombre: "Ossy Jo",
-    foto: "",
+    foto: "assets/artistas/ossy_jo.jpg",
     carta: "assets/baja/Sacrifice.jpg",
     instagram: "https://www.instagram.com/ossy.jo/",
-    x: ""
+    x: "https://x.com/ossy.jo"
   },
   {
     nombre: "Nattibie",
-    foto: "",
+    foto: "assets/artistas/Nattibie.jpg",
     carta: "assets/baja/Nightmare Joker.jpg",
     instagram: "https://www.instagram.com/nattibie/",
-    x: ""
+    x: "https://x.com/nattibie"
   },
   {
     nombre: "JoiseArt",
-    foto: "",
+    foto: "assets/artistas/joiseart.jpg",
     carta: "assets/baja/Mago - Seigi copia.jpg",
     instagram: "https://www.instagram.com/joiseart/",
-    x: ""
+    x: "https://x.com/joiseart"
   },
   {
     nombre: "Froggynami",
-    foto: "",
+    foto: "assets/artistas/froggynami.jpg",
     carta: "assets/baja/Destiny Bond copia.jpg",
     instagram: "https://www.instagram.com/froggynami/",
-    x: ""
+    x: "https://x.com/froggynami"
   },
   {
     nombre: "Spencer Draw",
-    foto: "",
+    foto: "assets/artistas/spencer_draw.jpg",
     carta: "assets/baja/Seal of Silence.jpg",
     instagram: "https://www.instagram.com/spencer_draw_/",
-    x: ""
+    x: "https://x.com/spencer_draw_"
   },
   {
     nombre: "Manuel Shoo",
-    foto: "",
+    foto: "assets/artistas/manuel_shoo.jpg",
     carta: "assets/baja/Double Strike.jpg",
     instagram: "https://www.instagram.com/manuelshoo/",
-    x: ""
+    x: "https://x.com/manuelshoo"
   },
   {
     nombre: "Kuzanagi009",
-    foto: "",
+    foto: "assets/artistas/kuzanagi009.jpg",
     carta: "assets/baja/Maga - Sybil.jpg",
     instagram: "https://www.instagram.com/kuzanagi009/",
-    x: ""
+    x: "https://x.com/kuzanagi009"
+  },
+  {
+    nombre: "YonsonCB",
+    foto: "assets/artistas/yonsoncb.jpg",
+    carta: "assets/baja/Clairvoyance.jpg",
+    instagram: "https://www.instagram.com/cloudettesama/",
+    x: "https://x.com/cloudettesama"
+  },
+  {
+    nombre: "桜上水ナミ(Nami)",
+    foto: "assets/artistas/桜上水ナミ(Nami).jpg",
+    carta: "assets/baja/Blood for Blood copia.jpg",
+    instagram: "https://www.instagram.com/N_sakurajyousui",
+    x: "https://x.com/N_sakurajyousui"
+  },
+  {
+    nombre: "Salted_Over",
+    foto: "",
+    carta: "assets/baja/Recovery copia.jpg",
+    instagram: "https://www.instagram.com/salted_over/",
+    x: "https://x.com/salted_over/"
+  },
+  {
+    nombre: "XamuraiRD",
+    foto: "assets/artistas/xamurai_rd.jpg",
+    carta: "assets/baja/ELEMENTAL - AGUA copia.jpg",
+    instagram: "https://www.instagram.com/xamurai_rd/",
+    x: "https://x.com/xamurai_rd",
+    tambien: [
+      {
+        nombre: "Wellinton Nommo",
+        foto: "assets/artistas/Wellinton Nommo.jpg",
+        instagram: "https://www.instagram.com/welinthon_simeon/",
+        rol: "Color"
+      }
+    ]
+  },
+  {
+    nombre: "XamuraiRD",
+    foto: "assets/artistas/xamurai_rd.jpg",
+    carta: "assets/baja/ELEMENTAL - TRUENO copia.jpg",
+    instagram: "https://www.instagram.com/xamurai_rd/",
+    x: "https://x.com/xamurai_rd",
+    tambien: [
+      {
+        nombre: "jj_artxd",
+        foto: "assets/artistas/jj_artxd.jpg",
+        instagram: "https://www.instagram.com/jj_artxd/",
+        rol: "Color"
+      }
+    ]
+  },
+  {
+    nombre: "XamuraiRD",
+    foto: "assets/artistas/xamurai_rd.jpg",
+    carta: "assets/baja/ELEMENTAL - PLANTA copia.jpg",
+    instagram: "https://www.instagram.com/xamurai_rd/",
+    x: "https://x.com/xamurai_rd",
+    tambien: [
+      {
+        nombre: "Kai-hos",
+        foto: "assets/artistas/kai-hos.png",
+        DA: "https://www.deviantart.com/akaiakira",
+        rol: "Color"
+      }
+    ]
+  },
+  {
+    nombre: "XamuraiRD",
+    foto: "assets/artistas/xamurai_rd.jpg",
+    carta: "assets/baja/ELEMENTAL - FUEGO copia.jpg",
+    instagram: "https://www.instagram.com/xamurai_rd/",
+    x: "https://x.com/xamurai_rd",
+    tambien: [
+      {
+        nombre: "Anderson-07",
+        foto: "assets/artistas/anderson-07.jpg",
+        DA: "https://www.deviantart.com/anderson-07",
+        rol: "Color"
+      }
+    ]
+  },
+  {
+    nombre: "XamuraiRD",
+    foto: "assets/artistas/xamurai_rd.jpg",
+    carta: "assets/baja/ELEMENTAL - ROCA copia.jpg",
+    instagram: "https://www.instagram.com/xamurai_rd/",
+    x: "https://x.com/xamurai_rd",
+    tambien: [
+      {
+        nombre: "???",
+        foto: "",
+        rol: "Color"
+      }
+    ]
   }
 ];
 

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Catálogo — MAGIKALEA</title>
-  <meta name="description" content="Artistas y cartas de Magikalea.">
+  <title data-i18n="meta.catalogTitle">Catálogo — MAGIKALEA</title>
+  <meta name="description" data-i18n-content="meta.catalogDesc" content="Artistas y cartas de Magikalea.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body class="catalog-page">
@@ -13,21 +13,21 @@
       <img src="assets/logo.png" alt="Magikalea">
     </a>
     <nav class="nav-links">
-      <a href="index.html#game">EL JUEGO</a>
-      <a href="index.html#cards">CARTAS</a>
-      <a href="index.html#artists">ARTISTAS</a>
-      <a href="index.html#community">COMUNIDAD</a>
+      <a href="index.html#game" data-i18n="nav.game">EL JUEGO</a>
+      <a href="index.html#cards" data-i18n="nav.cards">CARTAS</a>
+      <a href="index.html#artists" data-i18n="nav.artists">ARTISTAS</a>
+      <a href="index.html#community" data-i18n="nav.community">COMUNIDAD</a>
     </nav>
-    <a class="nav-cta" href="index.html">VOLVER</a>
+    <a class="nav-cta" href="index.html" data-i18n="nav.back">VOLVER</a>
   </header>
 
   <main>
     <section class="catalog section" id="cartas">
-      <a class="catalog-back" href="index.html#cards">← Volver al inicio</a>
-      <div class="section-kicker">COLECCIÓN</div>
-      <h2>Todas las<br><em>cartas.</em></h2>
-      <p class="catalog-lead">Cada carta, junto al artista que la hizo.</p>
-      <p class="catalog-production">Cartas en producción.</p>
+      <a class="catalog-back" href="index.html#cards" data-i18n="catalog.back">← Volver al inicio</a>
+      <div class="section-kicker" data-i18n="catalog.kicker">COLECCIÓN</div>
+      <h2 data-i18n-html="catalog.title">Todas las<br><em>cartas.</em></h2>
+      <p class="catalog-lead" data-i18n="catalog.lead">Cada carta, junto al artista que la hizo.</p>
+      <p class="catalog-production" data-i18n="catalog.production">Cartas en producción.</p>
       <div class="catalog-tabs" id="catalog-tabs"></div>
       <div class="catalog-cards" id="catalog-cards"></div>
     </section>
@@ -36,7 +36,7 @@
   <footer>
     <div class="footer-brand">
       <a href="index.html"><img src="assets/logo.png" alt="Magikalea"></a>
-      <span>NOMBRE TEMPORAL</span>
+      <span data-i18n="footer.name">NOMBRE TEMPORAL</span>
     </div>
     <div class="footer-links">
       <a href="TU_LINK_STEAM">STEAM</a>

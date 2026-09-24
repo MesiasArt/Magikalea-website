@@ -20,6 +20,7 @@ const CORE_TEAM = (typeof EQUIPO !== "undefined" ? EQUIPO : []).map(person => ({
   handle: person.alias || person.handle || "",
   initials: person.iniciales || person.initials || "",
   roles: person.roles || [],
+  credit: person.credito || person.credit || "",
   photo: person.foto || person.photo || "",
   socials: socialsFrom(person)
 }));
@@ -150,10 +151,13 @@ function renderArtists() {
   if (leads) leads.innerHTML = CORE_TEAM.map(person => `
     <article class="artist-card">
       ${avatarMarkup(person)}
-      <h3>${esc(person.name)}</h3>
-      ${person.handle ? `<p class="artist-handle">${esc(person.handle)}</p>` : ""}
-      <ul class="artist-roles">${(person.roles || []).map(role => `<li>${esc(role)}</li>`).join("")}</ul>
-      ${socialMarkup(person)}
+      <div class="artist-card-body">
+        ${person.credit ? `<p class="artist-kicker">${esc(person.credit)}</p>` : ""}
+        <h3>${esc(person.name)}</h3>
+        ${person.handle ? `<p class="artist-handle">${esc(person.handle)}</p>` : ""}
+        <ul class="artist-roles">${(person.roles || []).map(role => `<li>${esc(role)}</li>`).join("")}</ul>
+        ${socialMarkup(person)}
+      </div>
     </article>
   `).join("");
 

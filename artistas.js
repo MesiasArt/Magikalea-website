@@ -28,6 +28,7 @@ var EQUIPO = [
     carta: "",
     instagram: "",
     x: "https://x.com/mesiasart",
+    credito: "Creador / Game Design",
     roles: [
       "Creator · Game Director · Game Designer",
       "Programmer · Project Coordinator",
@@ -42,6 +43,7 @@ var EQUIPO = [
     carta: "",
     instagram: "https://www.instagram.com/ronny.correa.5/",
     x: "",
+    credito: "Desarrollo",
     roles: [
       "Lead Programmer",
       "Technical Foundation · Game Systems",
@@ -55,6 +57,7 @@ var EQUIPO = [
     carta: "",
     instagram: "",
     x: "https://x.com/Yonsoncb",
+    credito: "Artista principal",
     roles: [
       "Lead Artist",
       "Backgrounds · UI · Icons · Card Art"
@@ -68,6 +71,7 @@ var EQUIPO = [
     carta: "",
     instagram: "https://www.instagram.com/gabriel.nadamas/",
     x: "",
+    credito: "Graphic Design",
     roles: [
       "Graphic Designer · Card Production · Logo"
     ]

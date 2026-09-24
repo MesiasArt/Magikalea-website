@@ -79,20 +79,23 @@ p{color:#c6c9d8;line-height:1.7;font-size:16px}
 .world-content{position:relative;z-index:2;max-width:600px;margin-right:40%;padding:90px 20px}.world-content h2{font-size:clamp(45px,6vw,78px)}.world-content p{font-size:18px}
 
 .artists{background:#f2eee5;color:#1d2240}.artists .section-kicker{color:#87602d}.artists h2{color:#202541}.artists .section-head p{color:#5b5d68}
-.artist-leads{max-width:1200px;margin:48px auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.artist-card{padding:28px 18px 22px;background:#fff;border:1px solid #d6c7aa;display:flex;flex-direction:column;align-items:center;text-align:center;box-shadow:0 14px 30px rgba(42,39,49,.08)}
+.artist-leads{max-width:1200px;margin:48px auto 0;display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.artist-card{padding:16px 18px;background:#fff;border:1px solid #d6c7aa;display:flex;flex-direction:row;align-items:center;gap:14px;text-align:left;box-shadow:0 14px 30px rgba(42,39,49,.08)}
+.artist-card .artist-avatar{width:74px;height:74px;font-size:20px;border-width:3px}
+.artist-card-body{min-width:0;display:flex;flex-direction:column;align-items:flex-start}
+.artist-kicker{margin:0;font-size:10px;letter-spacing:1.5px;font-weight:900;color:#89602c;text-transform:uppercase}
 .artist-avatar{width:118px;height:118px;flex:none;display:grid;place-items:center;border-radius:50%;overflow:hidden;font-family:Cinzel,serif;font-weight:800;font-size:28px;color:#fff;background:radial-gradient(circle at 35% 25%,#91dcff,#493b78 65%,#171b38);border:4px solid #e6c878;box-shadow:inset 0 0 0 2px #1c2347}
 .artist-avatar img{width:100%;height:100%;object-fit:cover;display:block}
 .artist-avatar.is-empty{background:#f7f1e6;color:#c4b496;box-shadow:none}
 .artist-avatar.is-empty svg{width:46px;height:46px}
 .artist-card small{margin-top:16px;font-size:9px;letter-spacing:1.6px;color:#89602c;font-weight:900}
-.artist-card h3{font-family:Cinzel,serif;font-size:20px;line-height:1.2;color:#202541;margin:16px 0 0;overflow-wrap:break-word}
+.artist-card h3{font-family:Cinzel,serif;font-size:20px;line-height:1.2;color:#202541;margin:3px 0 0;overflow-wrap:break-word;text-align:left}
 .artist-card small{display:block;max-width:100%}
 .artist-handle{margin:6px 0 0;font-size:11px;letter-spacing:1.2px;font-weight:900;color:#89602c}
-.artist-roles{list-style:none;margin:10px 0 0;padding:0}
+.artist-roles{list-style:none;margin:6px 0 0;padding:0}
 .artist-roles li{font-size:12px;color:#686978;line-height:1.45}
 .artist-card p{font-size:13px;color:#686978;margin:8px 0 0;line-height:1.45}
-.artist-card .artist-socials{margin-top:auto;padding-top:14px}
+.artist-card .artist-socials{margin:8px 0 0;padding-top:0;justify-content:flex-start}
 .artist-socials{display:flex;gap:8px;justify-content:center;margin-top:14px}
 .artist-socials a,.artist-socials span{width:32px;height:32px;display:grid;place-items:center;border-radius:50%;border:1px solid #d6c7aa;color:#202541;background:#fff}
 .artist-socials a:hover{background:#202541;color:#f7c96b;border-color:#202541}

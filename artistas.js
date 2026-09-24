@@ -14,7 +14,10 @@
 //  6. La carta: guarda una imagen pequena en assets/baja
 //     (unos 340 px de ancho) y escribe la ruta en carta.
 //     Ejemplo: "assets/baja/mi-carta.jpg"
-//  7. Guarda el archivo y recarga la pagina.
+//  7. Para que salga en una pestaña del catálogo, en CARTAS
+//     escribe el tipo: "elementales", "magos", "bendiciones",
+//     "maldiciones" o "joker".
+//  8. Guarda el archivo y recarga la pagina.
 //
 //  No borres las comillas " " ni las comas ,
 // ============================================================
@@ -151,25 +154,27 @@ var ARTISTAS = [
   }
 ];
 
+// tipo: "elementales", "magos", "bendiciones", "maldiciones" o "joker"
+// Dejalo vacio "" si todavia no sabes en que pestaña va.
 var CARTAS = [
-  "assets/baja/Arcane Call.jpg",
-  "assets/baja/Blood for Blood copia.jpg",
-  "assets/baja/Clairvoyance.jpg",
-  "assets/baja/Deadeye.jpg",
-  "assets/baja/Destiny Bond copia.jpg",
-  "assets/baja/Double Strike.jpg",
-  "assets/baja/ELEMENTAL - AGUA copia.jpg",
-  "assets/baja/ELEMENTAL - FUEGO copia.jpg",
-  "assets/baja/ELEMENTAL - PLANTA copia.jpg",
-  "assets/baja/ELEMENTAL - ROCA copia.jpg",
-  "assets/baja/ELEMENTAL - TRUENO copia.jpg",
-  "assets/baja/Fortune's Favor.jpg",
-  "assets/baja/Maga - Mao.jpg",
-  "assets/baja/Maga - Naira.jpg",
-  "assets/baja/Maga - Sybil.jpg",
-  "assets/baja/Mago - Seigi copia.jpg",
-  "assets/baja/Nightmare Joker.jpg",
-  "assets/baja/Recovery copia.jpg",
-  "assets/baja/Sacrifice.jpg",
-  "assets/baja/Seal of Silence.jpg"
+  { archivo: "assets/baja/Arcane Call.jpg", tipo: "bendiciones" },
+  { archivo: "assets/baja/Blood for Blood copia.jpg", tipo: "maldiciones" },
+  { archivo: "assets/baja/Clairvoyance.jpg", tipo: "bendiciones" },
+  { archivo: "assets/baja/Deadeye.jpg", tipo: "bendiciones" },
+  { archivo: "assets/baja/Destiny Bond copia.jpg", tipo: "maldiciones" },
+  { archivo: "assets/baja/Double Strike.jpg", tipo: "bendiciones" },
+  { archivo: "assets/baja/ELEMENTAL - AGUA copia.jpg", tipo: "elementales" },
+  { archivo: "assets/baja/ELEMENTAL - FUEGO copia.jpg", tipo: "elementales" },
+  { archivo: "assets/baja/ELEMENTAL - PLANTA copia.jpg", tipo: "elementales" },
+  { archivo: "assets/baja/ELEMENTAL - ROCA copia.jpg", tipo: "elementales" },
+  { archivo: "assets/baja/ELEMENTAL - TRUENO copia.jpg", tipo: "elementales" },
+  { archivo: "assets/baja/Fortune's Favor.jpg", tipo: "bendiciones" },
+  { archivo: "assets/baja/Maga - Mao.jpg", tipo: "magos" },
+  { archivo: "assets/baja/Maga - Naira.jpg", tipo: "magos" },
+  { archivo: "assets/baja/Maga - Sybil.jpg", tipo: "magos" },
+  { archivo: "assets/baja/Mago - Seigi copia.jpg", tipo: "magos" },
+  { archivo: "assets/baja/Nightmare Joker.jpg", tipo: "joker" },
+  { archivo: "assets/baja/Recovery copia.jpg", tipo: "Bendicion" },
+  { archivo: "assets/baja/Sacrifice.jpg", tipo: "maldiciones" },
+  { archivo: "assets/baja/Seal of Silence.jpg", tipo: "bendiciones" }
 ];

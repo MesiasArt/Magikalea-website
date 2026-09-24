@@ -44,7 +44,22 @@ const ARTIST_LIST = (typeof ARTISTAS !== "undefined" ? ARTISTAS : []).map(person
   };
 });
 
-const DECK = typeof CARTAS !== "undefined" ? CARTAS : [];
+function cartaEntrada(item) {
+  if (typeof item === "string") return { src: item, tipo: "" };
+  return {
+    src: item.archivo || item.src || "",
+    tipo: String(item.tipo || "").trim().toLowerCase()
+  };
+}
+
+const DECK_ITEMS = (typeof CARTAS !== "undefined" ? CARTAS : []).map(cartaEntrada).filter(item => item.src);
+const TIPO_POR_CARTA = {};
+DECK_ITEMS.forEach(item => { TIPO_POR_CARTA[item.src] = item.tipo; });
+const DECK = DECK_ITEMS.map(item => item.src);
+
+function tipoDe(src) {
+  return TIPO_POR_CARTA[src] || "";
+}
 
 function cardTitle(src) {
   const file = String(src).split("/").pop() || "";
@@ -155,24 +170,23 @@ function renderArtists() {
         ${person.credit ? `<p class="artist-kicker">${esc(person.credit)}</p>` : ""}
         <h3>${esc(person.name)}</h3>
         ${person.handle ? `<p class="artist-handle">${esc(person.handle)}</p>` : ""}
-        <ul class="artist-roles">${(person.roles || []).map(role => `<li>${esc(role)}</li>`).join("")}</ul>
+        <ul class="artist-roles"><li>${esc((person.roles || []).join(" · "))}</li></ul>
         ${socialMarkup(person)}
       </div>
     </article>
   `).join("");
 
   const catalogCards = document.getElementById("catalog-cards");
+  const catalogTabs = document.getElementById("catalog-tabs");
+  let catalogSources = [];
   if (catalogCards) {
     const named = ARTIST_LIST.filter(person => person.card);
     const used = new Set(named.map(person => person.card));
     const loose = DECK.filter(src => src && !used.has(src));
-    const cards = [...named.map(person => person.card), ...loose];
-    catalogCards.innerHTML = cards.map(src => `
-      <article class="catalog-card">
-        <img src="${esc(src)}" alt="${esc(cardTitle(src))}" draggable="false">
-        ${cardArtistMarkup(artistForCard(src))}
-      </article>
-    `).join("");
+    catalogSources = [...named.map(person => person.card), ...loose].map(src => ({
+      src,
+      tipo: tipoDe(src)
+    }));
   }
 
   const gallery = document.getElementById("card-gallery");
@@ -203,6 +217,58 @@ function renderArtists() {
     });
   };
   watchImages(catalogCards);
+
+  if (catalogCards) {
+    const pestanas = [
+      { id: "todas", label: "Todas" },
+      { id: "elementales", label: "Elementales" },
+      { id: "magos", label: "Magos" },
+      { id: "bendiciones", label: "Bendiciones" },
+      { id: "maldiciones", label: "Maldiciones" },
+      { id: "joker", label: "Joker" }
+    ];
+    const META_CARTAS = 63;
+    const soonCard = `
+      <article class="catalog-card catalog-soon">
+        <div class="catalog-soon-card">
+          <span>En desarrollo</span>
+        </div>
+      </article>
+    `;
+    const renderCatalog = tipo => {
+      const visible = tipo === "todas"
+        ? catalogSources
+        : catalogSources.filter(item => item.tipo === tipo);
+      const cards = visible.map(item => `
+        <article class="catalog-card">
+          <img src="${esc(item.src)}" alt="${esc(cardTitle(item.src))}" draggable="false">
+          ${cardArtistMarkup(artistForCard(item.src))}
+        </article>
+      `).join("");
+      const empty = cards ? "" : `<p class="catalog-empty">Todavía no hay cartas en esta pestaña.</p>`;
+      const faltan = Math.max(0, META_CARTAS - catalogSources.length);
+      const soonCards = tipo === "todas" ? soonCard.repeat(faltan) : "";
+      catalogCards.innerHTML = cards + empty + soonCards;
+      watchImages(catalogCards);
+      if (!catalogTabs) return;
+      catalogTabs.querySelectorAll("button").forEach(button => {
+        const on = button.dataset.tipo === tipo;
+        button.classList.toggle("is-active", on);
+        button.setAttribute("aria-pressed", on ? "true" : "false");
+      });
+    };
+    if (catalogTabs) {
+      catalogTabs.innerHTML = pestanas.map(tab => `
+        <button type="button" data-tipo="${tab.id}" aria-pressed="false">${tab.label}</button>
+      `).join("");
+      catalogTabs.addEventListener("click", event => {
+        const button = event.target.closest("button");
+        if (!button || !catalogTabs.contains(button)) return;
+        renderCatalog(button.dataset.tipo);
+      });
+    }
+    renderCatalog("todas");
+  }
 
   const bindFlip = root => {
     if (!root) return;

@@ -14,7 +14,7 @@ Busca en `index.html`:
 
 y reemplázalos por los enlaces reales.
 
-También reemplaza los nombres de la sección "Artistas" por los créditos definitivos.
+Los créditos se editan en `artistas.js` con el Bloc de notas. `EQUIPO` son los 4 principales. `ARTISTAS` es el carrusel y el catálogo. En cada persona pega `instagram` o `x`, y si quieres el nombre real lo escribes en `nombre`. La foto va en `foto` (`assets/artistas/archivo.jpg`) y la carta en `carta` (`assets/baja/archivo.jpg`, unos 340 px de ancho). `CARTAS` es la colección general.
 
 ## Estilo
 La página usa:

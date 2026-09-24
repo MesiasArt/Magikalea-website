@@ -87,17 +87,6 @@
       </div>
     </section>
 
-    <section class="arena-section">
-      <div class="arena-copy">
-        <div class="section-kicker">EL CAMPO DE BATALLA</div>
-        <h2>El lugar donde<br><em>la magia cobra vida.</em></h2>
-        <p>Un tablero flotante rodeado por las islas de Magikalea. El arte del juego combina fantasía, ilustración 2D y una interfaz inspirada en juegos de cartas clásicos.</p>
-      </div>
-      <div class="arena-frame">
-        <img src="assets/arena.png" alt="Arena de Magikalea">
-      </div>
-    </section>
-
     <section class="cards-section section" id="cards">
       <div class="section-head">
         <div>
@@ -107,14 +96,8 @@
         <p>Estas son algunas de las cartas que ya forman parte del prototipo. La colección seguirá creciendo durante el desarrollo.</p>
       </div>
 
-      <div class="card-gallery">
-        <article class="tcg-card"><div class="card-glow"></div><img src="assets/card-1.png" alt="Carta de Magikalea"></article>
-        <article class="tcg-card featured"><div class="card-glow"></div><img src="assets/card-2.png" alt="Carta de Magikalea"></article>
-        <article class="tcg-card"><div class="card-glow"></div><img src="assets/card-3.png" alt="Carta de Magikalea"></article>
-        <article class="tcg-card"><div class="card-glow"></div><img src="assets/card-4.png" alt="Carta de Magikalea"></article>
-        <article class="tcg-card"><div class="card-glow"></div><img src="assets/card-5.png" alt="Carta de Magikalea"></article>
-      </div>
-      <div class="card-note">✦ MÁS CARTAS EN DESARROLLO ✦</div>
+      <div class="card-gallery" id="card-gallery"></div>
+      <a class="more-link" href="catalogo.html#cartas">Ver más cartas</a>
     </section>
 
     <section class="world-section">
@@ -132,21 +115,17 @@
         <h2>Hecho por<br><em>artistas.</em></h2>
         <p>Magikalea es un proyecto independiente construido junto a ilustradores, diseñadores y desarrolladores.</p>
       </div>
-      <div class="artist-grid">
-        <article class="artist-card">
-          <div class="artist-avatar">MA</div>
-          <div><small>CREADOR / GAME DESIGN</small><h3>MesiasArt</h3><p>Concepto, dirección y diseño del juego.</p></div>
-        </article>
-        <article class="artist-card">
-          <div class="artist-avatar">ART</div>
-          <div><small>ILUSTRACIÓN</small><h3>ARTISTA</h3><p>Personajes, cartas y arte del universo.</p></div>
-        </article>
-        <article class="artist-card">
-          <div class="artist-avatar">DEV</div>
-          <div><small>DESARROLLO</small><h3>DESARROLLADOR</h3><p>Programación y sistemas del juego.</p></div>
-        </article>
+      <div class="artist-leads" id="artist-leads"></div>
+      <div class="roster-block">
+        <div class="roster-kicker">Colaboradores</div>
+        <div class="carousel-shell" id="artist-carousel">
+          <button type="button" class="carousel-nav prev" aria-label="Artistas anteriores">‹</button>
+          <div class="carousel-viewport">
+            <div class="carousel-track" id="artist-roster"></div>
+          </div>
+          <button type="button" class="carousel-nav next" aria-label="Artistas siguientes">›</button>
+        </div>
       </div>
-      <p class="replace-note">* Reemplaza estos nombres y perfiles con los créditos reales del proyecto.</p>
     </section>
 
     <section class="community" id="community">
@@ -176,6 +155,7 @@
     <div class="copyright">© 2026 MAGIKALEA · INDIE GAME IN DEVELOPMENT</div>
   </footer>
 
+  <script src="artistas.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -176,7 +176,6 @@ p{color:#c6c9d8;line-height:1.7;font-size:16px}
 .catalog-artists{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;max-width:1100px;margin:40px auto 0}
 .catalog-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:22px;max-width:980px;margin:18px auto 0;align-items:start}
 .catalog-card{text-align:center}
-.catalog-card.is-credits-only .card-artists{margin-top:0}
 .catalog-card img{display:block;width:100%;height:auto;border:4px solid #17151e;background:#111;-webkit-user-drag:none;user-select:none}
 .catalog-soon-card{aspect-ratio:340/476;display:grid;place-items:center;background:#111;border:4px solid #17151e;color:#f7c96b;padding:16px;text-align:center}
 .catalog-soon-card span{font-family:Cinzel,serif;font-size:15px;font-weight:700;letter-spacing:1.4px;line-height:1.3;text-transform:uppercase}

@@ -399,7 +399,7 @@ function flipCardMarkup(person, clone) {
   const people = [person, ...(person.extras || [])];
   const art = person.card && !person.hideCard
     ? `<img class="flip-card-art" src="${esc(person.card)}" alt="${clone ? "" : `Carta de ${esc(person.name)}`}">`
-    : `<div class="flip-empty">${esc(t("flip.soon"))}</div>`;
+    : `<div class="flip-empty">${esc(t(person.hideCard ? "catalog.soon" : "flip.soon"))}</div>`;
   return `
     <article class="flip-card"${clone ? ' aria-hidden="true"' : ""}>
       <div class="flip-inner">
@@ -503,8 +503,10 @@ function renderArtists() {
         ? catalogSources
         : catalogSources.filter(item => item.tipo === tipo);
       const cards = visible.map(item => `
-        <article class="catalog-card${item.hideCard ? " is-credits-only" : ""}">
-          ${item.hideCard ? "" : `<img src="${esc(item.src)}" alt="${esc(cardTitle(item.src))}" draggable="false">`}
+        <article class="catalog-card">
+          ${item.hideCard
+            ? `<div class="catalog-soon-card"><span>${esc(t("catalog.soon"))}</span></div>`
+            : `<img src="${esc(item.src)}" alt="${esc(cardTitle(item.src))}" draggable="false">`}
           ${cardArtistsMarkup(item.src)}
         </article>
       `).join("");

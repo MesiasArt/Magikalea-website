@@ -138,12 +138,10 @@ const I18N = {
     "artists.roster": "Colaboradores",
     "artists.prev": "Artistas anteriores",
     "artists.next": "Artistas siguientes",
-    "community.badge": "✦ LA MAGIA NOS UNE ✦",
-    "community.title": "¿Quieres ver cómo<br><em>se hace el juego?</em>",
-    "community.body": "Únete al Discord para conocer avances, probar builds, ver arte nuevo y hablar directamente con el equipo.",
-    "community.discord": "UNIRME AL DISCORD ↗",
-    "community.x": "SEGUIR EN X / TWITTER ↗",
-    "community.ig": "SEGUIR EN INSTAGRAM ↗",
+    "community.title": "Forma parte<br><em>del juego</em>",
+    "community.lead": "Buscamos jugadores para probar las versiones tempranas,",
+    "community.body": "Juega las próximas versiones, comparte tu opinión y ayuda a dar forma al futuro del juego.",
+    "community.testers": "TESTERS",
     "footer.name": "NOMBRE TEMPORAL",
     "catalog.back": "← Volver al inicio",
     "catalog.kicker": "COLECCIÓN",
@@ -210,12 +208,10 @@ const I18N = {
     "artists.roster": "Collaborators",
     "artists.prev": "Previous artists",
     "artists.next": "Next artists",
-    "community.badge": "✦ MAGIC UNITES US ✦",
-    "community.title": "Want to see how<br><em>the game is made?</em>",
-    "community.body": "Join the Discord for updates, playtest builds, new art, and to talk with the team.",
-    "community.discord": "JOIN THE DISCORD ↗",
-    "community.x": "FOLLOW ON X / TWITTER ↗",
-    "community.ig": "FOLLOW ON INSTAGRAM ↗",
+    "community.title": "Become part<br><em>of the game</em>",
+    "community.lead": "We're looking for players to test early builds,",
+    "community.body": "Play upcoming builds, share your feedback, and help shape the future of our game.",
+    "community.testers": "TESTERS",
     "footer.name": "TEMPORARY NAME",
     "catalog.back": "← Back to home",
     "catalog.kicker": "COLLECTION",
@@ -661,10 +657,28 @@ function refreshLocalized() {
   if (paintCatalog) paintCatalog(catalogFilter);
 }
 
+function renderTesters() {
+  const list = document.getElementById("tester-list");
+  const kicker = document.querySelector(".tester-kicker");
+  if (!list) return;
+  const names = (typeof TESTERS !== "undefined" ? TESTERS : [])
+    .map(name => String(name || "").trim())
+    .filter(Boolean);
+  if (!names.length) {
+    list.hidden = true;
+    if (kicker) kicker.hidden = true;
+    return;
+  }
+  list.hidden = false;
+  if (kicker) kicker.hidden = false;
+  list.innerHTML = names.map(name => `<li>${esc(name)}</li>`).join("");
+}
+
 LANG = initialLang();
 mountLangSwitch();
 applyLang();
 renderArtists();
+renderTesters();
 
 // Magikalea landing page — small interaction layer.
 document.querySelectorAll('a[href^="#"]').forEach(a => {

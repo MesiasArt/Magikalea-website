@@ -123,77 +123,7 @@ var ARTISTAS = [
     instagram: "https://www.instagram.com/kosena_master/",
     x: "https://x.com/kosena_master"
   },
-  {
-    nombre: "Ossy Jo",
-    foto: "assets/artistas/ossy_jo.jpg",
-    carta: "assets/baja/Sacrifice.jpg",
-    instagram: "https://www.instagram.com/ossy.jo/",
-    x: "https://x.com/ossy.jo"
-  },
-  {
-    nombre: "Nattibie",
-    foto: "assets/artistas/Nattibie.jpg",
-    carta: "assets/baja/Nightmare Joker.jpg",
-    instagram: "https://www.instagram.com/nattibie/",
-    x: "https://x.com/nattibie"
-  },
-  {
-    nombre: "JoiseArt",
-    foto: "assets/artistas/joiseart.jpg",
-    carta: "assets/baja/Mago - Seigi copia.jpg",
-    instagram: "https://www.instagram.com/joiseart/",
-    x: "https://x.com/joiseart"
-  },
-  {
-    nombre: "Froggynami",
-    foto: "assets/artistas/froggynami.jpg",
-    carta: "assets/baja/Destiny Bond copia.jpg",
-    instagram: "https://www.instagram.com/froggynami/",
-    x: "https://x.com/froggynami"
-  },
-  {
-    nombre: "Spencer Draw",
-    foto: "assets/artistas/spencer_draw.jpg",
-    carta: "assets/baja/Seal of Silence.jpg",
-    instagram: "https://www.instagram.com/spencer_draw_/",
-    x: "https://x.com/spencer_draw_"
-  },
-  {
-    nombre: "Manuel Shoo",
-    foto: "assets/artistas/manuel_shoo.jpg",
-    carta: "assets/baja/Double Strike.jpg",
-    instagram: "https://www.instagram.com/manuelshoo/",
-    x: "https://x.com/manuelshoo"
-  },
-  {
-    nombre: "Kuzanagi009",
-    foto: "assets/artistas/kuzanagi009.jpg",
-    carta: "assets/baja/Maga - Sybil.jpg",
-    instagram: "https://www.instagram.com/kuzanagi009/",
-    x: "https://x.com/kuzanagi009"
-  },
-  {
-    nombre: "YonsonCB",
-    foto: "assets/artistas/yonsoncb.jpg",
-    carta: "assets/baja/Clairvoyance.jpg",
-    instagram: "https://www.instagram.com/cloudettesama/",
-    x: "https://x.com/cloudettesama"
-  },
-  {
-    nombre: "桜上水ナミ(Nami)",
-    foto: "assets/artistas/桜上水ナミ(Nami).jpg",
-    carta: "assets/baja/Blood for Blood copia.jpg",
-    instagram: "https://www.instagram.com/N_sakurajyousui",
-    x: "https://x.com/N_sakurajyousui"
-  },
-  {
-    nombre: "Salted_Over",
-    foto: "assets/artistas/salted_over.jpg",
-    carta: "assets/baja/Recovery copia.jpg",
-    instagram: "https://www.instagram.com/salted_over/",
-    x: "https://x.com/salted_over/"
-  },
-  {
+ {
     nombre: "XamuraiRD",
     foto: "assets/artistas/xamurai_rd.jpg",
     carta: "assets/baja/ELEMENTAL - AGUA copia.jpg",
@@ -266,7 +196,84 @@ var ARTISTAS = [
         rol: "Color"
       }
     ]
-  }
+  },
+  {
+    nombre: "Ossy Jo",
+    foto: "assets/artistas/ossy_jo.jpg",
+    carta: "assets/baja/Sacrifice.jpg",
+    instagram: "https://www.instagram.com/ossy.jo/",
+    x: "https://x.com/ossy.jo"
+  },
+  {
+    nombre: "Nattibie",
+    foto: "assets/artistas/Nattibie.jpg",
+    carta: "assets/baja/Nightmare Joker.jpg",
+    instagram: "https://www.instagram.com/nattibie/",
+    x: "https://x.com/nattibie"
+  },
+  {
+    nombre: "JoiseArt",
+    foto: "assets/artistas/joiseart.jpg",
+    carta: "assets/baja/Mago - Seigi copia.jpg",
+    instagram: "https://www.instagram.com/joiseart/",
+    x: "https://x.com/joiseart"
+  },
+  {
+    nombre: "Froggynami",
+    foto: "assets/artistas/froggynami.jpg",
+    carta: "assets/baja/Destiny Bond copia.jpg",
+    instagram: "https://www.instagram.com/froggynami/",
+    x: "https://x.com/froggynami"
+  },
+  {
+    nombre: "Spencer Draw",
+    foto: "assets/artistas/spencer_draw.jpg",
+    carta: "assets/baja/Seal of Silence.jpg",
+    instagram: "https://www.instagram.com/spencer_draw_/",
+    x: "https://x.com/spencer_draw_"
+  },
+  {
+    nombre: "Manuel Shoo",
+    foto: "assets/artistas/manuel_shoo.jpg",
+    carta: "assets/baja/Double Strike.jpg",
+    instagram: "https://www.instagram.com/manuelshoo/",
+    x: "https://x.com/manuelshoo"
+  },
+  {
+    nombre: "Kuzanagi009",
+    foto: "assets/artistas/kuzanagi009.jpg",
+    carta: "assets/baja/Maga - Sybil.jpg",
+    instagram: "https://www.instagram.com/kuzanagi009/",
+    x: "https://x.com/kuzanagi009"
+  },
+  {
+    nombre: "YonsonCB",
+    foto: "assets/artistas/yonsoncb.jpg",
+    carta: "assets/baja/Clairvoyance.jpg",
+    instagram: "https://www.instagram.com/cloudettesama/",
+    x: "https://x.com/cloudettesama"
+  },
+  {
+    nombre: "桜上水ナミ(Nami)",
+    foto: "assets/artistas/桜上水ナミ(Nami).jpg",
+    carta: "assets/baja/Blood for Blood copia.jpg",
+    instagram: "https://www.instagram.com/N_sakurajyousui",
+    x: "https://x.com/N_sakurajyousui"
+  },
+  {
+    nombre: "Salted_Over",
+    foto: "assets/artistas/salted_over.jpg",
+    carta: "assets/baja/Recovery copia.jpg",
+    instagram: "https://www.instagram.com/salted_over/",
+    x: "https://x.com/salted_over/"
+  },
+   {
+    nombre: "Nicodomo",
+    foto: "assets/artistas/Nicodomo.jpg",
+    carta: "assets/baja/Mirror.jpg",
+    instagram: "https://www.instagram.com/nicodomo19/",
+    x: "https://x.com/nicodomo19"
+  },
 ];
 
 // tipo: "elementales", "magos", "bendiciones", "maldiciones" o "joker"
@@ -292,4 +299,20 @@ var CARTAS = [
   { archivo: "assets/baja/Recovery copia.jpg", tipo: "Bendicion" },
   { archivo: "assets/baja/Sacrifice.jpg", tipo: "maldiciones" },
   { archivo: "assets/baja/Seal of Silence.jpg", tipo: "bendiciones" }
+];
+
+// ============================================================
+//  TESTERS
+//  Un nombre por linea, entre comillas y con coma al final.
+//  Salen en 3 columnas debajo de "Forma parte del juego".
+//  Ejemplo:
+//  var TESTERS = [
+//    "Ana",
+//    "Luis",
+//  ];
+// ============================================================
+var TESTERS = [
+  "Ariel Hernandez",
+  "Bryan Guillermo R.",
+  "Rommel Pichardo",
 ];

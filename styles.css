@@ -11,8 +11,22 @@ a{color:inherit;text-decoration:none}
 .site-glow{position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 50% 0,rgba(97,202,255,.10),transparent 35%);z-index:0}
 .nav{position:absolute;top:0;left:0;right:0;z-index:20;height:82px;padding:12px 4vw;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(180deg,rgba(5,10,25,.9),transparent)}
 .brand{width:120px}.brand img{width:100%;height:auto;display:block}
-.nav-links{display:flex;gap:32px;font-size:12px;font-weight:900;letter-spacing:2px;color:#f5ead0}
+.nav-links{display:flex;gap:32px;font-size:12px;font-weight:900;letter-spacing:2px;color:#f5ead0;align-items:center}
 .nav-links a{opacity:.85;transition:.2s}.nav-links a:hover{color:var(--gold);opacity:1}
+.nav-drop{position:relative}
+.nav-drop > a{display:inline-block}
+.nav-drop-menu{
+  position:absolute;top:100%;left:50%;transform:translateX(-50%);
+  padding-top:12px;min-width:220px;display:none;z-index:30
+}
+.nav-drop:hover .nav-drop-menu,.nav-drop:focus-within .nav-drop-menu{display:block}
+.nav-drop-menu a{
+  display:block;white-space:nowrap;opacity:1;
+  padding:12px 16px;letter-spacing:1.4px;
+  background:rgba(8,13,32,.94);border:1px solid rgba(247,201,107,.45);
+  box-shadow:0 10px 24px rgba(0,0,0,.35)
+}
+.nav-drop-menu a:hover{background:rgba(16,23,54,.98);color:var(--gold)}
 .nav-cta,.btn{font-weight:900;letter-spacing:1.5px;font-size:12px}
 .nav-cta{margin-right:86px;padding:11px 16px;border:1px solid rgba(247,201,107,.65);background:rgba(16,23,54,.78);box-shadow:0 4px 18px rgba(0,0,0,.3)}
 .lang-switch{position:fixed;top:22px;right:4vw;z-index:40;display:flex;border:1px solid rgba(247,201,107,.75);background:rgba(16,23,54,.92);box-shadow:0 4px 18px rgba(0,0,0,.35)}

@@ -39,6 +39,7 @@ function personFrom(person, fallbackRole) {
     name,
     photo: person.foto || person.photo || "",
     card: person.carta || person.card || "",
+    hideCard: !!(person.ocultarCarta || person.hideCard),
     role: person.rol || person.role || fallbackRole,
     initials: person.iniciales || initialsFrom(name),
     socials: socialsFrom(person)
@@ -396,9 +397,9 @@ function flipPersonMarkup(person) {
 
 function flipCardMarkup(person, clone) {
   const people = [person, ...(person.extras || [])];
-  const art = person.card
+  const art = person.card && !person.hideCard
     ? `<img class="flip-card-art" src="${esc(person.card)}" alt="${clone ? "" : `Carta de ${esc(person.name)}`}">`
-    : `<div class="flip-empty">${esc(t("flip.soon"))}</div>`;
+    : `<div class="flip-empty">${esc(t(person.hideCard ? "catalog.soon" : "flip.soon"))}</div>`;
   return `
     <article class="flip-card"${clone ? ' aria-hidden="true"' : ""}>
       <div class="flip-inner">
@@ -440,9 +441,13 @@ function renderArtists() {
     const named = ARTIST_LIST.filter(person => person.card);
     const used = new Set(named.map(person => person.card));
     const loose = DECK.filter(src => src && !used.has(src));
+    const hiddenCards = new Set(
+      ARTIST_LIST.filter(person => person.card && person.hideCard).map(person => person.card)
+    );
     catalogSources = [...named.map(person => person.card), ...loose].map(src => ({
       src,
-      tipo: tipoDe(src)
+      tipo: tipoDe(src),
+      hideCard: hiddenCards.has(src)
     }));
   }
 
@@ -499,7 +504,9 @@ function renderArtists() {
         : catalogSources.filter(item => item.tipo === tipo);
       const cards = visible.map(item => `
         <article class="catalog-card">
-          <img src="${esc(item.src)}" alt="${esc(cardTitle(item.src))}" draggable="false">
+          ${item.hideCard
+            ? `<div class="catalog-soon-card"><span>${esc(t("catalog.soon"))}</span></div>`
+            : `<img src="${esc(item.src)}" alt="${esc(cardTitle(item.src))}" draggable="false">`}
           ${cardArtistsMarkup(item.src)}
         </article>
       `).join("");

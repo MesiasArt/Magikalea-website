@@ -14,6 +14,8 @@
 //  6. La carta: guarda una imagen pequena en assets/baja
 //     (unos 340 px de ancho) y escribe la ruta en carta.
 //     Ejemplo: "assets/baja/mi-carta.jpg"
+//     Si quieres ocultar solo la imagen y dejar los creditos,
+//     agrega ocultarCarta: true en ese artista.
 //  7. Para que salga en una pestaña del catálogo, en CARTAS
 //     escribe el tipo: "elementales", "magos", "bendiciones",
 //     "maldiciones" o "joker".
@@ -172,6 +174,7 @@ var ARTISTAS = [
     nombre: "XamuraiRD",
     foto: "assets/artistas/xamurai_rd.jpg",
     carta: "assets/baja/ELEMENTAL - FUEGO copia.jpg",
+    ocultarCarta: true,
     instagram: "https://www.instagram.com/xamurai_rd/",
     x: "https://x.com/xamurai_rd",
     tambien: [
@@ -187,6 +190,7 @@ var ARTISTAS = [
     nombre: "XamuraiRD",
     foto: "assets/artistas/xamurai_rd.jpg",
     carta: "assets/baja/ELEMENTAL - ROCA copia.jpg",
+    ocultarCarta: true,
     instagram: "https://www.instagram.com/xamurai_rd/",
     x: "https://x.com/xamurai_rd",
     tambien: [

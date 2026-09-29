@@ -320,4 +320,5 @@ var TESTERS = [
   "Bryan Guillermo R.",
   "Rommel Pichardo",
   "Lisbeth Santos",
+  "Yoel Pilier",
 ];

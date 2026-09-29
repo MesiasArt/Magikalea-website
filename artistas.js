@@ -278,6 +278,13 @@ var ARTISTAS = [
     instagram: "https://www.instagram.com/nicodomo19/",
     x: "https://x.com/nicodomo19"
   },
+  {
+    nombre: "Cloudettesama",
+    foto: "assets/artistas/cloudettesama.jpg",
+    carta: "assets/baja/maga - melissa.jpg",
+    instagram: "https://www.instagram.com/cloudettesama/",
+    x: "https://x.com/cloudettesama"
+  },
 ];
 
 // tipo: "elementales", "magos", "bendiciones", "maldiciones" o "joker"
@@ -296,6 +303,7 @@ var CARTAS = [
   { archivo: "assets/baja/ELEMENTAL - TRUENO copia.jpg", tipo: "elementales" },
   { archivo: "assets/baja/Fortune's Favor.jpg", tipo: "bendiciones" },
   { archivo: "assets/baja/Maga - Mao.jpg", tipo: "magos" },
+  { archivo: "assets/baja/maga - melissa.jpg", tipo: "magos" },
   { archivo: "assets/baja/Maga - Naira.jpg", tipo: "magos" },
   { archivo: "assets/baja/Maga - Sybil.jpg", tipo: "magos" },
   { archivo: "assets/baja/Mago - Seigi copia.jpg", tipo: "magos" },

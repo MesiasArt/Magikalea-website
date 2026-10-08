@@ -325,7 +325,8 @@ function mountLangSwitch() {
     applyLang();
     refreshLocalized();
   });
-  document.body.appendChild(wrap);
+  const navActions = document.querySelector(".catalog-page .nav-actions");
+  (navActions || document.body).appendChild(wrap);
 }
 
 function esc(value) {

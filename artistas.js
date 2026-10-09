@@ -1,5 +1,5 @@
 // ============================================================
-//  CREDITOS DE MAGIKALEA
+//  CREDITOS DE FORS MAGIKA
 //  Abre este archivo con el Bloc de notas para editarlo.
 // ============================================================
 //
@@ -90,6 +90,11 @@ var EQUIPO = [
 ];
 
 var ARTISTAS = [
+  {
+    nombre: "Luigi Code Art",
+    foto: "",
+    carta: "assets/baja/Last Stand.jpg"
+  },
   {
     nombre: "MesiasArt",
     foto: "assets/artistas/mesiasart.jpg",
@@ -302,6 +307,7 @@ var CARTAS = [
   { archivo: "assets/baja/ELEMENTAL - ROCA copia.jpg", tipo: "elementales" },
   { archivo: "assets/baja/ELEMENTAL - TRUENO copia.jpg", tipo: "elementales" },
   { archivo: "assets/baja/Fortune's Favor.jpg", tipo: "bendiciones" },
+  { archivo: "assets/baja/Last Stand.jpg", tipo: "bendiciones" },
   { archivo: "assets/baja/Maga - Mao.jpg", tipo: "magos" },
   { archivo: "assets/baja/maga - melissa.jpg", tipo: "magos" },
   { archivo: "assets/baja/Maga - Naira.jpg", tipo: "magos" },

@@ -1,4 +1,4 @@
-# MAGIKALEA — landing page prototype
+# FORS MAGIKA — landing page prototype
 
 ## Estructura
 - `index.html` — página completa.

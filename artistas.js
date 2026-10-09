@@ -92,8 +92,12 @@ var EQUIPO = [
 var ARTISTAS = [
   {
     nombre: "Luigi Code Art",
-    foto: "",
-    carta: "assets/baja/Last Stand.jpg"
+    foto: "assets/artistas/luigi.jpg",
+    carta: "assets/baja/Last Stand.jpg",
+    instagram: [
+      "https://www.instagram.com/luigiparedesrd/",
+      "https://www.instagram.com/dembowcomics/"
+    ]
   },
   {
     nombre: "MesiasArt",

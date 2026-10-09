@@ -353,14 +353,17 @@ function socialMarkup(person) {
   const keys = ["instagram", "x", "deviantart", "artstation", "behance", "discord", "web"];
   const links = keys.filter(key => person.socials && person.socials[key]);
   if (!links.length) return "";
-  const items = links;
-  return `<div class="artist-socials">${items.map(key => {
+  const items = links.flatMap(key => {
+    const value = person.socials[key];
+    return (Array.isArray(value) ? value : [value]).filter(Boolean).map(href => ({ key, href }));
+  });
+  return `<div class="artist-socials">${items.map(({ key, href }) => {
     const icon = SOCIAL_ICONS[key];
     const label = SOCIAL_LABELS[key];
-    const href = links.length ? person.socials[key] : "";
     if (!href) return `<span title="${label}" aria-hidden="true">${icon}</span>`;
-    const named = LANG === "en" ? `${label} — ${person.name}` : `${label} de ${person.name}`;
-    return `<a href="${esc(href)}" target="_blank" rel="noreferrer" aria-label="${esc(named)}" title="${label}">${icon}</a>`;
+    const accountLabel = Array.isArray(person.socials[key]) ? `${label} @${handleFrom(href)}` : label;
+    const named = LANG === "en" ? `${accountLabel} — ${person.name}` : `${accountLabel} de ${person.name}`;
+    return `<a href="${esc(href)}" target="_blank" rel="noreferrer" aria-label="${esc(named)}" title="${esc(accountLabel)}">${icon}</a>`;
   }).join("")}</div>`;
 }
 

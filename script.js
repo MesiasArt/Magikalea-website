@@ -696,27 +696,17 @@ function renderTesters() {
 function mountCardPreview() {
   const dialog = document.createElement("dialog");
   dialog.className = "card-preview";
-  dialog.innerHTML = '<div class="card-preview-toolbar"><span></span><button type="button" class="card-preview-size"></button><button type="button" class="card-preview-close"></button></div><div class="card-preview-scroll"><img></div>';
+  dialog.innerHTML = '<button type="button" class="card-preview-close"></button><img>';
   document.body.appendChild(dialog);
   const image = dialog.querySelector("img");
-  const size = dialog.querySelector(".card-preview-size");
   const close = dialog.querySelector(".card-preview-close");
-  const updateSize = () => {
-    size.textContent = LANG === "en"
-      ? (dialog.classList.contains("is-original") ? "Fit to screen" : "Original size")
-      : (dialog.classList.contains("is-original") ? "Ajustar a pantalla" : "Tamaño original");
-  };
   const open = target => {
     image.src = target.getAttribute("src");
-    image.alt = target.alt || cardTitle(image.src);
-    dialog.querySelector("span").textContent = cardTitle(image.src);
+    image.alt = target.alt || cardTitle(target.getAttribute("src"));
     close.textContent = LANG === "en" ? "Close ✕" : "Cerrar ✕";
     dialog.setAttribute("aria-label", LANG === "en" ? "Enlarged card" : "Carta ampliada");
-    dialog.classList.remove("is-original");
-    updateSize();
     dialog.showModal();
     document.body.classList.add("card-preview-open");
-    dialog.querySelector(".card-preview-scroll").scrollTo(0, 0);
   };
   document.addEventListener("click", event => {
     const target = event.target.closest("[data-card-preview]");
@@ -727,10 +717,6 @@ function mountCardPreview() {
       event.preventDefault();
       open(event.target);
     }
-  });
-  size.addEventListener("click", () => {
-    dialog.classList.toggle("is-original");
-    updateSize();
   });
   close.addEventListener("click", () => dialog.close());
   dialog.addEventListener("click", event => {

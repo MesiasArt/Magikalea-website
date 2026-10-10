@@ -91,6 +91,13 @@ var EQUIPO = [
 
 var ARTISTAS = [
   {
+    nombre: "rakun01_",
+    foto: "assets/artistas/Rakun01.jpg",
+    carta: "assets/baja/Spellbreak.jpg",
+    instagram: "https://www.instagram.com/rakun01_/",
+    x: "https://x.com/rakun01_"
+  },
+  {
     nombre: "Luigi Code Art",
     foto: "assets/artistas/luigi.jpg",
     carta: "assets/baja/Last Stand.jpg",
@@ -320,6 +327,7 @@ var CARTAS = [
   { archivo: "assets/baja/Nightmare Joker.jpg", tipo: "joker" },
   { archivo: "assets/baja/Recovery copia.jpg", tipo: "Bendicion" },
   { archivo: "assets/baja/Sacrifice.jpg", tipo: "maldiciones" },
+  { archivo: "assets/baja/Spellbreak.jpg", tipo: "maldiciones" },
   { archivo: "assets/baja/Seal of Silence.jpg", tipo: "bendiciones" }
 ];
 

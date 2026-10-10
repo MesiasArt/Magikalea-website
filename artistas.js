@@ -89,23 +89,9 @@ var EQUIPO = [
   }
 ];
 
+// Orden de creacion: agrega las cartas nuevas al final de ARTISTAS.
+// Este orden se usa en el catalogo y en el carrusel de la portada.
 var ARTISTAS = [
-  {
-    nombre: "rakun01_",
-    foto: "assets/artistas/Rakun01.jpg",
-    carta: "assets/baja/Spellbreak.jpg",
-    instagram: "https://www.instagram.com/rakun01_/",
-    x: "https://x.com/rakun01_"
-  },
-  {
-    nombre: "Luigi Code Art",
-    foto: "assets/artistas/luigi.jpg",
-    carta: "assets/baja/Last Stand.jpg",
-    instagram: [
-      "https://www.instagram.com/luigiparedesrd/",
-      "https://www.instagram.com/dembowcomics/"
-    ]
-  },
   {
     nombre: "MesiasArt",
     foto: "assets/artistas/mesiasart.jpg",
@@ -300,6 +286,22 @@ var ARTISTAS = [
     carta: "assets/baja/maga - melissa.jpg",
     instagram: "https://www.instagram.com/cloudettesama/",
     x: "https://x.com/cloudettesama"
+  },
+  {
+    nombre: "Luigi Code Art",
+    foto: "assets/artistas/luigi.jpg",
+    carta: "assets/baja/Last Stand.jpg",
+    instagram: [
+      "https://www.instagram.com/luigiparedesrd/",
+      "https://www.instagram.com/dembowcomics/"
+    ]
+  },
+  {
+    nombre: "rakun01_",
+    foto: "assets/artistas/Rakun01.jpg",
+    carta: "assets/baja/Spellbreak.jpg",
+    instagram: "https://www.instagram.com/rakun01_/",
+    x: "https://x.com/rakun01_"
   },
 ];
 

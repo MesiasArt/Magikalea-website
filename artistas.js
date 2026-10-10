@@ -349,4 +349,5 @@ var TESTERS = [
   "Rommel Pichardo",
   "Lisbeth Santos",
   "Yoel Pilier",
+  "Luis Manuel Franjul",
 ];

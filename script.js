@@ -406,7 +406,7 @@ function flipPersonMarkup(person) {
 function flipCardMarkup(person, clone) {
   const people = [person, ...(person.extras || [])];
   const art = person.card && !person.hideCard
-    ? `<img class="flip-card-art" src="${esc(person.card)}" alt="${clone ? "" : `Carta de ${esc(person.name)}`}">`
+    ? `<img class="flip-card-art" data-card-preview role="button" tabindex="${clone ? -1 : 0}" src="${esc(person.card)}" alt="${clone ? "" : `Carta de ${esc(person.name)}`}">`
     : `<div class="flip-empty">${esc(t(person.hideCard ? "catalog.soon" : "flip.soon"))}</div>`;
   return `
     <article class="flip-card"${clone ? ' aria-hidden="true"' : ""}>
@@ -470,7 +470,7 @@ function renderArtists() {
     ];
     gallery.innerHTML = featured.map(src => `
       <article class="tcg-card">
-        <img src="${esc(src)}" alt="${esc(cardTitle(src))}" draggable="false">
+        <img data-card-preview role="button" tabindex="0" src="${esc(src)}" alt="${esc(cardTitle(src))}" draggable="false">
       </article>
     `).join("");
   }
@@ -514,7 +514,7 @@ function renderArtists() {
         <article class="catalog-card">
           ${item.hideCard
             ? `<div class="catalog-soon-card"><span>${esc(t("catalog.soon"))}</span></div>`
-            : `<img src="${esc(item.src)}" alt="${esc(cardTitle(item.src))}" draggable="false">`}
+            : `<img data-card-preview role="button" tabindex="0" src="${esc(item.src)}" alt="${esc(cardTitle(item.src))}" draggable="false">`}
           ${cardArtistsMarkup(item.src)}
         </article>
       `).join("");
@@ -693,11 +693,61 @@ function renderTesters() {
   list.innerHTML = names.map(name => `<li>${esc(name)}</li>`).join("");
 }
 
+function mountCardPreview() {
+  const dialog = document.createElement("dialog");
+  dialog.className = "card-preview";
+  dialog.innerHTML = '<div class="card-preview-toolbar"><span></span><button type="button" class="card-preview-size"></button><button type="button" class="card-preview-close"></button></div><div class="card-preview-scroll"><img></div>';
+  document.body.appendChild(dialog);
+  const image = dialog.querySelector("img");
+  const size = dialog.querySelector(".card-preview-size");
+  const close = dialog.querySelector(".card-preview-close");
+  const updateSize = () => {
+    size.textContent = LANG === "en"
+      ? (dialog.classList.contains("is-original") ? "Fit to screen" : "Original size")
+      : (dialog.classList.contains("is-original") ? "Ajustar a pantalla" : "Tamaño original");
+  };
+  const open = target => {
+    image.src = target.getAttribute("src");
+    image.alt = target.alt || cardTitle(image.src);
+    dialog.querySelector("span").textContent = cardTitle(image.src);
+    close.textContent = LANG === "en" ? "Close ✕" : "Cerrar ✕";
+    dialog.setAttribute("aria-label", LANG === "en" ? "Enlarged card" : "Carta ampliada");
+    dialog.classList.remove("is-original");
+    updateSize();
+    dialog.showModal();
+    document.body.classList.add("card-preview-open");
+    dialog.querySelector(".card-preview-scroll").scrollTo(0, 0);
+  };
+  document.addEventListener("click", event => {
+    const target = event.target.closest("[data-card-preview]");
+    if (target) open(target);
+  });
+  document.addEventListener("keydown", event => {
+    if ((event.key === "Enter" || event.key === " ") && event.target.matches("[data-card-preview]")) {
+      event.preventDefault();
+      open(event.target);
+    }
+  });
+  size.addEventListener("click", () => {
+    dialog.classList.toggle("is-original");
+    updateSize();
+  });
+  close.addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", event => {
+    if (event.target === dialog) dialog.close();
+  });
+  dialog.addEventListener("close", () => {
+    document.body.classList.remove("card-preview-open");
+    image.removeAttribute("src");
+  });
+}
+
 LANG = initialLang();
 mountLangSwitch();
 applyLang();
 renderArtists();
 renderTesters();
+mountCardPreview();
 
 // Fors Magika landing page — small interaction layer.
 document.querySelectorAll('a[href^="#"]').forEach(a => {

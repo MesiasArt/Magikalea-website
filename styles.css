@@ -234,3 +234,21 @@ body:not(.catalog-page) .nav-links{position:absolute;left:50%;transform:translat
 .guide-page{background:#0a1027}.guide-page .how-to{background:linear-gradient(#0a1027,#111735)}.guide-hero,.guide-type,.guide-cycle,.guide-step{border:1px solid rgba(226,177,83,.35)}
 @media(min-width:901px) and (max-width:1150px){.nav-links{gap:18px;font-size:10px;letter-spacing:1px}}
 @media(max-width:900px){.nav-links{display:flex;gap:0;margin-left:auto;margin-right:20px}.nav-links>a:not(.nav-how),.nav-links>.nav-drop{display:none}body:not(.catalog-page) .nav-links{left:auto;right:100px;transform:none}.nav-how{font-size:9px;letter-spacing:1px;white-space:nowrap}}
+
+/* Guide: scenery and alternating sections in the site palette. */
+.guide-page .how-to{padding-top:55px;background:linear-gradient(180deg,#080d20,#111a3b 45%,#080d20)}
+.guide-hero{position:relative;isolation:isolate;overflow:hidden;padding:65px 30px;background:linear-gradient(rgba(8,13,32,.68),rgba(8,13,32,.88)),url("assets/world-bg.png") center 42%/cover;box-shadow:0 16px 45px #05091666}
+.guide-page .guide-block{position:relative;margin-top:28px;padding:38px 30px;border:1px solid #293252;border-radius:16px;background:linear-gradient(135deg,#1d254af0,#0b1027f0)}
+.guide-page #guide-objective{background:linear-gradient(rgba(8,13,32,.8),rgba(8,13,32,.94)),url("assets/Fondo_Inicio.jpg") center/cover}
+.guide-page .guide-block:nth-of-type(2){background:#f2eee5;color:#202541;border-color:#d6c7aa}
+.guide-page .guide-block:nth-of-type(2) .section-kicker{color:#87602d}
+.guide-page .guide-block:nth-of-type(2) .guide-type{background:#fffaf0;color:#202541;border-color:#d6c7aa;box-shadow:0 8px 24px #21172a0d}
+.guide-page .guide-block:nth-of-type(2) p{color:#5b5d68}
+.guide-page .guide-block:nth-of-type(3){background:linear-gradient(rgba(8,13,32,.86),rgba(17,26,59,.94)),url("assets/world-bg.png") center/cover}
+.guide-page .guide-cycle{background:rgba(8,13,32,.6)}
+.guide-hand.guide-hand-cards{grid-template-columns:repeat(6,minmax(0,1fr));max-width:100%;gap:12px;align-items:center;padding:18px 0}
+.guide-hand-cards>div{background:transparent;border:0;aspect-ratio:340/476;border-radius:5px;box-shadow:0 8px 20px #0008}
+.guide-hand-cards>div>img{display:block;width:100%;height:auto;border-radius:5px;transition:transform .2s}
+.guide-hand-cards>div>img:hover{transform:translateY(-6px)}
+.guide-hand-cards .guide-mage{outline:2px solid var(--gold);outline-offset:4px;box-shadow:0 0 25px #f7c96b55;transform:translateY(-10px)}
+@media(max-width:600px){.guide-page .guide-block{padding:28px 16px}.guide-hero{padding:40px 20px}.guide-hand.guide-hand-cards{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 12px}.guide-hand-cards .guide-mage{transform:none}.guide-page .brand{width:80px}.guide-page .nav-links{margin-right:10px}}

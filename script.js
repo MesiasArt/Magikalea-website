@@ -285,6 +285,9 @@ function trRole(role) {
 
 function applyLang() {
   document.documentElement.lang = LANG;
+  document.querySelectorAll("[data-guide-es]").forEach(el => {
+    el.textContent = LANG === "en" ? el.dataset.guideEn : el.dataset.guideEs;
+  });
   document.querySelectorAll("[data-i18n]").forEach(el => {
     el.textContent = t(el.dataset.i18n);
   });

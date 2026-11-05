@@ -351,4 +351,5 @@ var TESTERS = [
   "Yoel Pilier",
   "Luis Manuel Franjul",
   "Wklaud",
+  "Luis Miguel Parra",
 ];

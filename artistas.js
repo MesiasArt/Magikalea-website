@@ -165,9 +165,10 @@ var ARTISTAS = [
     x: "https://x.com/xamurai_rd",
     tambien: [
       {
-        nombre: "Kai-hos",
-        foto: "assets/artistas/kai-hos.png",
-        DA: "https://www.deviantart.com/akaiakira",
+        nombre: "YonsonCB",
+        foto: "assets/artistas/yonsoncb.jpg",
+        instagram: "https://www.instagram.com/Yonsoncb",
+        x: "https://x.com/Yonsoncb",
         rol: "Color"
       }
     ]
@@ -176,14 +177,14 @@ var ARTISTAS = [
     nombre: "XamuraiRD",
     foto: "assets/artistas/xamurai_rd.jpg",
     carta: "assets/baja/ELEMENTAL - FUEGO copia.jpg",
-    ocultarCarta: true,
     instagram: "https://www.instagram.com/xamurai_rd/",
     x: "https://x.com/xamurai_rd",
     tambien: [
       {
-        nombre: "Anderson-07",
-        foto: "assets/artistas/anderson-07.jpg",
-        DA: "https://www.deviantart.com/anderson-07",
+        nombre: "YonsonCB",
+        foto: "assets/artistas/yonsoncb.jpg",
+        instagram: "https://www.instagram.com/Yonsoncb",
+        x: "https://x.com/Yonsoncb",
         rol: "Color"
       }
     ]
@@ -192,13 +193,14 @@ var ARTISTAS = [
     nombre: "XamuraiRD",
     foto: "assets/artistas/xamurai_rd.jpg",
     carta: "assets/baja/ELEMENTAL - ROCA copia.jpg",
-    ocultarCarta: true,
     instagram: "https://www.instagram.com/xamurai_rd/",
     x: "https://x.com/xamurai_rd",
     tambien: [
       {
-        nombre: "???",
-        foto: "",
+        nombre: "YonsonCB",
+        foto: "assets/artistas/yonsoncb.jpg",
+        instagram: "https://www.instagram.com/Yonsoncb",
+        x: "https://x.com/Yonsoncb",
         rol: "Color"
       }
     ]

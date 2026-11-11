@@ -265,7 +265,7 @@ let catalogFilter = "todas";
 
 function initialLang() {
   try {
-    const saved = localStorage.getItem("magikalea-lang");
+    const saved = localStorage.getItem("forsmagika-lang");
     if (saved === "en" || saved === "es") return saved;
   } catch (error) {}
   const primary = (navigator.language || "").toLowerCase();
@@ -332,7 +332,7 @@ function mountLangSwitch() {
     const button = event.target.closest("[data-set-lang]");
     if (!button || button.dataset.setLang === LANG) return;
     LANG = button.dataset.setLang;
-    try { localStorage.setItem("magikalea-lang", LANG); } catch (error) {}
+    try { localStorage.setItem("forsmagika-lang", LANG); } catch (error) {}
     applyLang();
     refreshLocalized();
   });

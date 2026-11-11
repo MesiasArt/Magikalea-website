@@ -6,13 +6,12 @@
 - `script.js` — scroll/parallax ligero.
 - `assets/` — arte proporcionado para el prototipo.
 
-## Antes de publicarla
-Busca en `index.html`:
-- `TU_LINK_STEAM`
-- `TU_LINK_TWITTER`
-- `TU_LINK_DISCORD`
-
-y reemplázalos por los enlaces reales.
+## Enlaces oficiales
+- Web: https://forsmagika.alphaeve.net/
+- Steam: https://store.steampowered.com/app/5470570/Fors_Magika
+- Discord: https://discord.gg/j2uTEAsWHy
+- Instagram: https://www.instagram.com/forsmagika/
+- Twitter/X: https://x.com/forsmagika
 
 Los créditos se editan en `artistas.js` con el Bloc de notas. `EQUIPO` son los 4 principales. `ARTISTAS` es el carrusel y el catálogo. En cada persona pega `instagram` o `x`, y si quieres el nombre real lo escribes en `nombre`. La foto va en `foto` (`assets/artistas/archivo.jpg`) y la carta en `carta` (`assets/baja/archivo.jpg`, unos 340 px de ancho). `CARTAS` es la colección general.
 
